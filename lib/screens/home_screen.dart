@@ -38,7 +38,6 @@ class _HomeBodyState extends State<_HomeBody> {
   Widget build(BuildContext context) {
     final darkBg = const Color(0xFF181A20);
     final cardBg = const Color(0xFF23262B);
-    //final accent = Theme.of(context).colorScheme.secondary;
     final textColor = Colors.white;
     return Scaffold(
       backgroundColor: darkBg,
