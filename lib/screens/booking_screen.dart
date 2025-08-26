@@ -235,6 +235,7 @@ class _BookingScreenState extends State<BookingScreen> {
                                   return;
                                 }
                                 context.read<BookingBloc>().add(
+                                  
                                   BookingCreate(
                                     branchId: widget.branch.id,
                                     start: start,
