@@ -81,7 +81,7 @@ class _HomeBodyState extends State<_HomeBody> {
                         Icons.search,
                         color: Colors.white70,
                       ),
-                      hintText: 'Search by name, city, or branch',
+                      hintText: 'Search by name, city, or branch.',
                       hintStyle: TextStyle(color: Colors.white54),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8),
