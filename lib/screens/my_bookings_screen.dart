@@ -30,11 +30,12 @@ class MyBookingsScreen extends StatelessWidget {
         ),
         body: BlocBuilder<MyBookingsBloc, MyBookingsState>(
           builder: (context, state) {
-            if (state.loading)
+            if (state.loading) {
               return const Center(
                 child: CircularProgressIndicator(color: Colors.white),
               );
-            if (state.error != null)
+            }
+            if (state.error != null) {
               return LoadingError(
                 message: state.error!,
                 onRetry:
@@ -42,13 +43,15 @@ class MyBookingsScreen extends StatelessWidget {
                       const MyBookingsLoad(),
                     ),
               );
-            if (state.items.isEmpty)
+            }
+            if (state.items.isEmpty) {
               return const Center(
                 child: Text(
                   'No bookings yet',
                   style: TextStyle(color: Colors.white70),
                 ),
               );
+            }
 
             return ListView.separated(
               padding: const EdgeInsets.all(12),
