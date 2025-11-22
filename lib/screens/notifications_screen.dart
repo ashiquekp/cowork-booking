@@ -31,11 +31,12 @@ class NotificationsScreen extends StatelessWidget {
         ),
         body: BlocBuilder<NotificationsBloc, NotificationsState>(
           builder: (context, state) {
-            if (state.loading)
+            if (state.loading) {
               return const Center(
                 child: CircularProgressIndicator(color: Colors.white),
               );
-            if (state.error != null)
+            }
+            if (state.error != null) {
               return LoadingError(
                 message: state.error!,
                 onRetry:
@@ -43,13 +44,15 @@ class NotificationsScreen extends StatelessWidget {
                       const NotificationsLoad(),
                     ),
               );
-            if (state.items.isEmpty)
+            }
+            if (state.items.isEmpty) {
               return const Center(
                 child: Text(
                   'No notifications',
                   style: TextStyle(color: Colors.white70),
                 ),
               );
+            }
 
             return ListView.separated(
               padding: const EdgeInsets.all(12),
